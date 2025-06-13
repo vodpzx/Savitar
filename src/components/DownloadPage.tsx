@@ -133,7 +133,7 @@ export function DownloadPage() {
 // New DownloadButton definition
 function DownloadButton({ className }: { className?: string }) {
   const handleDownload = () => {
-    window.location.href = 'https://github.com/vodpzx/HellStar/raw/main/Enqro.exe';
+    window.location.href = 'https://github.com/vodpzx/enqro/raw/main/Boostrapper.zip';
   };
 
   return (
